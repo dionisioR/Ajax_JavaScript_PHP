@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+</head>
+<body>
+    <h1>Exemplo simples com Ajax</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est sit sequi praesentium itaque incidunt eum, assumenda, nam repudiandae autem laborum, dignissimos nulla maiores optio. Nemo possimus debitis magni explicabo ut!</p>
+    
+    <h3>Qual será o texto que vem em seguida?</h3>
+    <p id="texto"></p>
+    <button id="botao">Apresentar o Texto</button>
+
+    <script>
+        document.querySelector("#botao").addEventListener("click",() => {
+            document.querySelector("#texto").textContent = "Texto inserido a partir do JavaScript";
+        })
+    </script>
+</body>
+</html>
