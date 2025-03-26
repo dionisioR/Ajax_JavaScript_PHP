@@ -23,6 +23,18 @@
             // [metodo, url, async]
             request.open("GET", "http://localhost/ajax_javascript_php/02_exemplo/texto.txt", true);
 
+            // prepara uma função de callback
+            request.onload = function() {
+                if(request.status == 200){
+                    console.log('success')
+                    console.log(this.response)
+                    document.querySelector("#texto").textContent = this.response;
+                }
+            }
+
+            // efetuar o pedido
+            request.send();
+
         })
     </script>
 </body>

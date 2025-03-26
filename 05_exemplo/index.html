@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajax</title>
+  </head>
+  <body>
+    <h1>Lista de clientes</h1>
+
+    <hr />
+    <button id="btn_cliente">Lista de clientes</button>
+    <div id="clientes"></div>
+
+    <script>
+      document.getElementById("btn_cliente").addEventListener("click", () => {
+        let request = new XMLHttpRequest()
+        request.open("GET", "http://localhost/ajax_javascript_php/05_exemplo/dados.json", true)
+        request.onload = function(){
+
+          console.log(this.response)
+
+          let dados = JSON.parse(this.response)
+
+          dados.forEach((cliente) => {
+            let p = document.createElement('p')
+            p.textContent = `Nome: ${cliente}`
+            document.querySelector('#clientes').appendChild(p)
+          })
+        }
+        request.send()
+      })
+
+    </script>
+  </body>
+</html>

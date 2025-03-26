@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajax</title>
+  </head>
+  <body>
+    <h1>Lista de clientes</h1>
+
+    <hr />
+    <button id="btn_cliente">Apresentar o Texto</button>
+
+    <script>
+      document.getElementById("btn_cliente").addEventListener("click", () => {
+        let request = new XMLHttpRequest();
+        request.open("GET", "http://localhost/ajax_javascript_php/04_exemplo/dados.json", true);
+        request.onload = function() {
+          console.log(this.response);
+
+          let cliente = JSON.parse(this.response);
+          console.log(cliente);
+
+          console.log(cliente[0])
+          console.log(cliente[1])
+          console.log(cliente[2])
+        }
+        request.send();
+      })
+
+    </script>
+  </body>
+</html>
