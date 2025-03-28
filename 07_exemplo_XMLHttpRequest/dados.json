@@ -1,0 +1,27 @@
+[
+    {
+        "nome": "João Ribeiro",
+        "telefone": "111111111",
+        "email": "joao.ribeiro@gmail.com"
+    },
+    {
+        "nome": "Ana Santos",
+        "telefone": "222222222",
+        "email": "ana.santos@gmail.com"
+    },
+    {
+        "nome": "Carlos Silva",
+        "telefone": "333333333",
+        "email": "carlos.silva@gmail.com"
+    },
+    {
+        "nome": "Maria Oliveira",
+        "telefone": "444444444",
+        "email": "maria.oliveira@gmail.com"
+    },
+    {
+        "nome": "Joaquim Martins",
+        "telefone": "555555555",
+        "email": "joaquim.martins@gmail.com"
+    }
+]
